@@ -7,6 +7,7 @@ import Add from "../pages/Add/Add";
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
 import Gallery from "../pages/Gallery/Gallery";
+import Preorder from "../pages/Preorder/Preorder";
 
 export const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
             {
                 path: '/gallery',
                 element: <Gallery></Gallery>
+            },
+            {
+                path: '/preorder',
+                element: <Preorder></Preorder>
             }
         ]
     }

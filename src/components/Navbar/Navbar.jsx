@@ -4,10 +4,10 @@ import Logo from "../Logo/Logo";
 const Navbar = () => {
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to={`/add`}>Add Cars</NavLink></li>
-        <li><NavLink>My Cart</NavLink></li>
+        <li><NavLink to='/add'>Add Cars</NavLink></li>
+        <li><NavLink to='/cart'>My Cart</NavLink></li>
         <li><NavLink to='/gallery'>Gallery</NavLink></li>
-        <li><NavLink>Pre-Order</NavLink></li>
+        <li><NavLink to='/preorder'>Pre-Order</NavLink></li>
         <li><NavLink to='/about'>About</NavLink></li>
         <li><NavLink to='/contact'>Contact</NavLink></li>
         
