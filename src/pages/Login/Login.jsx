@@ -1,3 +1,4 @@
+import { FcGoogle } from "react-icons/fc";
 import { NavLink } from "react-router-dom";
 
 const Login = () => {
@@ -9,6 +10,7 @@ const Login = () => {
                     <input type="text" placeholder="Enter Your Email" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
                     <input type="text" placeholder="Enter Your Password" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
                     <input type="submit" value="Login" className="bg-blue-600 text-white px-2 py-2 rounded-md" />
+                    <button className="flex items-center justify-center gap-2 border border-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 w-full"><FcGoogle className="text-xl"></FcGoogle>Sign In with Google</button>
                     <p>Don't Have Account Yet? <NavLink to='/register' className={`text-blue-600 font-medium`}>Register</NavLink></p>
                 </form>
             </div>
