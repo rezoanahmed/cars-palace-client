@@ -1,9 +1,11 @@
+import Brands from "../../pages/Brands/Brands";
 import Hero from "../Hero/Hero";
 
 const Home = () => {
     return (
-        <div>
+        <div className="space-y-10">
             <Hero></Hero>            
+            <Brands></Brands>
         </div>
     );
 };

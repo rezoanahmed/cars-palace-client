@@ -9,6 +9,7 @@ import Contact from "../pages/Contact/Contact";
 import Gallery from "../pages/Gallery/Gallery";
 import Preorder from "../pages/Preorder/Preorder";
 import Cart from "../pages/Cart/Cart";
+import Brands from "../pages/Brands/Brands";
 
 export const router = createBrowserRouter([
     {
@@ -17,7 +18,8 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: ()=>fetch("http://localhost:5000/brands"),
             },
             {
                 path: '/login',
@@ -48,8 +50,13 @@ export const router = createBrowserRouter([
                 element: <Preorder></Preorder>
             },
             {
-                path: 'cart',
+                path: '/cart',
                 element: <Cart></Cart>
+            },
+            {
+                path: '/brands',
+                element: <Brands></Brands>,
+                loader: ()=>fetch("http://localhost:5000/brands"),
             }
         ]
     }
