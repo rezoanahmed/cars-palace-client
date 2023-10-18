@@ -10,9 +10,10 @@ const Add = () => {
         const type = form.type.value;
         const price = form.price.value;
         const rating = form.rating.value;
+        const photo = form.photo.value;
         const details = form.details.value;
 
-        const car = {brand, model, year, type, price, rating, details};
+        const car = {brand, model, year, type, price, rating, photo, details};
         // console.log(car);
 
         fetch("http://localhost:5000/cars",{
@@ -59,9 +60,14 @@ const Add = () => {
                         
                     </div>
                     {/* Price and Rating */}
-                    <div name='price' className="flex gap-2">
+                    <div  className="flex gap-2">
                         <input name='price' type="text" placeholder="Price" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
                         <input name='rating' type="text" placeholder="Rating" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
+                    </div>
+                    {/* photo url */}
+                    <div className="flex gap-2">
+                        <input name='photo' type="text" placeholder="Photo URL" className="input input-bordered input-info border-blue-600 w-full" />
+                        
                     </div>
                     {/* Description */}
                     <div className="flex gap-2">
