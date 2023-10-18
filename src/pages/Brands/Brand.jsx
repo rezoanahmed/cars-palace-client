@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Slider from "../../components/Slider/Slider";
 
 
 const Brand = ({ brand }) => {
