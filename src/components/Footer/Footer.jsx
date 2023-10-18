@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className="">
             <footer className="footer p-10 bg-base-200 text-base-content flex flex-col items-center text-center">
-                <nav className="flex">
+                <nav className="flex flex-col md:flex-row">
                     <NavLink to='/'>
                         <a className="link link-hover">Home</a>
                     </NavLink>

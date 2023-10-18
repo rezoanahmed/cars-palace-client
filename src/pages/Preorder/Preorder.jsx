@@ -2,7 +2,7 @@
 
 const Preorder = () => {
     return (
-        <div className="p-4">
+        <div className="p-4 mb-20">
             <h1 className="text-center text-3xl">Pre-Order Exciting Cars From Us!!!</h1>
             <div className="flex justify-center">
                 <form className="flex gap-2 flex-col justify-center mt-10">

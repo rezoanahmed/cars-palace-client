@@ -8,7 +8,7 @@ const Slider = () => {
                         <div className="hero-overlay bg-black bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md">
-                                <h1 className="mb-5 text-2xl font-bold">Out with the old, in with the new! Get an extra $1,000 on your trade-in this month only!</h1>
+                                <h1 className="mb-5 md:text-2xl font-bold">Out with the old, in with the new! Get an extra $1,000 on your trade-in this month only!</h1>
                                 <p className="mb-5"></p>
                             </div>
                         </div>
@@ -23,7 +23,7 @@ const Slider = () => {
                         <div className="hero-overlay bg-black bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md">
-                                <h1 className="mb-5 text-2xl font-bold">Drive with us, earn with us! Introducing our exclusive loyalty program – every mile counts.</h1>
+                                <h1 className="mb-5 md:text-2xl font-bold">Drive with us, earn with us! Introducing our exclusive loyalty program – every mile counts.</h1>
                             </div>
                         </div>
                     </div>
@@ -37,7 +37,7 @@ const Slider = () => {
                         <div className="hero-overlay bg-black bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md">
-                                <h1 className="mb-5 text-2xl font-bold">Drive now, pay later – with 0% interest! Make your dream car a reality today.</h1>
+                                <h1 className="mb-5 md:text-2xl font-bold">Drive now, pay later – with 0% interest! Make your dream car a reality today.</h1>
                             </div>
                         </div>
                     </div>
