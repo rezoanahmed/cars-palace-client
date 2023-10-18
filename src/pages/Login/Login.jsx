@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 const Login = () => {
     const context = useContext(AuthContext);
-    const {login} = context;
+    const {login, signInWithGoogle} = context;
     const handleLogin = e =>{
         e.preventDefault();
         const form = e.target;
@@ -17,7 +17,7 @@ const Login = () => {
         .then(userCredentils=>{
             console.log(userCredentils);
             if(userCredentils){
-                Swal.fire("Welcome", "Login Succeeded", 'success');
+                Swal.fire("Welcome!", "Login Succeeded", 'success');
             }
         })
         .catch(error=>{

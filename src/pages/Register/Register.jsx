@@ -6,8 +6,8 @@ import Swal from "sweetalert2";
 
 const Register = () => {
     const context = useContext(AuthContext);
-    const {test, register} = context;
-    console.log(test);
+    const { register, googleSignIn} = context;
+    // console.log(test);
 
 
     const handleResister = e =>{
@@ -39,9 +39,9 @@ const Register = () => {
                     <input name='password' type="password" placeholder="Enter Your Password" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
                     <input name='photo' type="text" placeholder="Enter Your Photo URL" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
                     <input type="submit" value="Register" className="bg-blue-600 text-white px-2 py-2 rounded-md" />
-                    <button className="flex items-center justify-center gap-2 border border-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 w-full"><FcGoogle className="text-xl"></FcGoogle>Continue with Google</button>
-                    <p>Already Have Account? <NavLink to='/login' className={`text-blue-600 font-medium`}>Login</NavLink></p>
                 </form>
+                    <button onClick={googleSignIn} className="flex items-center justify-center gap-2 border border-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 w-full"><FcGoogle className="text-xl"></FcGoogle>Continue with Google</button>
+                    <p>Already Have Account? <NavLink to='/login' className={`text-blue-600 font-medium`}>Login</NavLink></p>
             </div>
         </div>
     );
