@@ -10,6 +10,8 @@ import Gallery from "../pages/Gallery/Gallery";
 import Preorder from "../pages/Preorder/Preorder";
 import Cart from "../pages/Cart/Cart";
 import Brands from "../pages/Brands/Brands";
+import BrandDetails from "../pages/Brands/BrandDetails";
+import Car from "../components/Cars/Car";
 
 export const router = createBrowserRouter([
     {
@@ -57,6 +59,16 @@ export const router = createBrowserRouter([
                 path: '/brands',
                 element: <Brands></Brands>,
                 loader: ()=>fetch("http://localhost:5000/brands"),
+            },
+            {
+                path: '/brand/:name',
+                element: <BrandDetails></BrandDetails>,
+                loader: ({params})=>fetch(`http://localhost:5000/cars/${params.name}`)
+            },
+            {
+                path: 'car/:id',
+                element: <Car></Car>,
+                loader: ({params})=>fetch(`http://localhost:5000/car/${params.id}`)
             }
         ]
     }

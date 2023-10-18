@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const Brand = ({ brand }) => {
-    const { name, photo, description } = brand;
+    const { name, photo } = brand;
     return (
         <div>
             {/* {name} */}
@@ -11,8 +11,8 @@ const Brand = ({ brand }) => {
                 <div className="card-body">
                     {/* <h2 className="text-center text-4xl font-medium">{name}</h2> */}
                     <div className="w-full">
-                        <Link to={`/brands/${name}`}>
-                            <button className="btn bg-blue-500 text-white hover:bg-blue-600 w-full">See Collections</button>
+                        <Link to={`/brand/${name}`}>
+                            <button className="btn bg-blue-500 text-white hover:bg-blue-600 w-full">See Cars</button>
                         </Link>
                     </div>
                 </div>
