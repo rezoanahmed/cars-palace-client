@@ -29,6 +29,7 @@ const Add = () => {
             if(data.insertedId){
                 Swal.fire("Great!!!", "Car Has Been Added Successfully", "success");
             }
+            form.reset();
         })
     }
     return (

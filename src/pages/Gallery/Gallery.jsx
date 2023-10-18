@@ -1,18 +1,18 @@
 const Gallery = () => {
     // Sample image URLs. Replace with your own image URLs or import from assets.
     const images = [
-        'https://i.ibb.co/gJyrhyQ/pexels-jan-kop-iva-3349460.jpg',
-        'https://i.ibb.co/vXcF4sY/pexels-fatih-turan-18482935.jpg',
-        'https://i.ibb.co/68D7ZWG/pexels-auto-records-10550012.jpg',
-        'https://i.ibb.co/F5KdGjD/jonathan-cooper-lih-Uu1k-Abk-Q-unsplash.jpg',
-        'https://i.ibb.co/bzf5Gcy/valdemars-magone-f-JQFty-VQY2g-unsplash.jpg',
-        'https://i.ibb.co/yBk9Dc9/kevin-bhagat-3c-Lpiv8h5so-unsplash.jpg',
-        'https://i.ibb.co/gJyrhyQ/pexels-jan-kop-iva-3349460.jpg',
-        'https://i.ibb.co/vXcF4sY/pexels-fatih-turan-18482935.jpg',
-        'https://i.ibb.co/68D7ZWG/pexels-auto-records-10550012.jpg',
-        'https://i.ibb.co/F5KdGjD/jonathan-cooper-lih-Uu1k-Abk-Q-unsplash.jpg',
-        'https://i.ibb.co/bzf5Gcy/valdemars-magone-f-JQFty-VQY2g-unsplash.jpg',
-        'https://i.ibb.co/yBk9Dc9/kevin-bhagat-3c-Lpiv8h5so-unsplash.jpg',
+        "https://images.pexels.com/photos/3422964/pexels-photo-3422964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/7813163/pexels-photo-7813163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/10550012/pexels-photo-10550012.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/2684219/pexels-photo-2684219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/2365572/pexels-photo-2365572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/274974/pexels-photo-274974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/17507731/pexels-photo-17507731/free-photo-of-white-toyota-86-parked-near-abandoned-warehouse.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/3972750/pexels-photo-3972750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/8980830/pexels-photo-8980830.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ];
 
     return (
