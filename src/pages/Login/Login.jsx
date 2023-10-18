@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 const Login = () => {
     const context = useContext(AuthContext);
-    const {login, signInWithGoogle} = context;
+    const {login, googleSignIn } = context;
     const handleLogin = e =>{
         e.preventDefault();
         const form = e.target;
@@ -36,7 +36,7 @@ const Login = () => {
                     <input name='email' type="text" placeholder="Enter Your Email" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
                     <input name='password' type="text" placeholder="Enter Your Password" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
                     <input type="submit" value="Login" className="bg-blue-600 text-white px-2 py-2 rounded-md" />
-                    <button className="flex items-center justify-center gap-2 border border-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 w-full"><FcGoogle className="text-xl"></FcGoogle>Sign In with Google</button>
+                    <button onClick={googleSignIn} className="flex items-center justify-center gap-2 border border-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 w-full"><FcGoogle className="text-xl"></FcGoogle>Sign In with Google</button>
                     <p>Don't Have Account Yet? <NavLink to='/register' className={`text-blue-600 font-medium`}>Register</NavLink></p>
                 </form>
             </div>
