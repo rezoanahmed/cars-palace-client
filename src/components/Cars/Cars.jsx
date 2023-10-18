@@ -11,6 +11,7 @@ const Cars = ({ cars }) => {
                     <h2 className="text-2xl font-semibold">{brand} {model} {year}</h2>
                     <div className="card-actions">
                         <div className="badge badge-outline">{type}</div>
+                        <div className="badge badge-outline">Rating: {rating}⭐</div>
                     </div>
                     <p className="text-red-500 text-xl font-bold">${price}</p>
                     <div className="w-full">
