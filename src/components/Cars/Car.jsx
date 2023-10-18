@@ -1,9 +1,35 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const Car = () => {
+
+    
+
     const data = useLoaderData();
     const { rating, brand, model, year, type, photo, price, details } = data
+
+
+    // purchase handler
+    const handlePurchase = () =>{
+        
+        fetch("http://localhost:5000/cart",{
+            method: "POST",
+            headers:{
+                "content-type": 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data.insertedId);
+            if(data.insertedId){
+                Swal.fire("Congratulations!!!", "Your Purchase Has Been Done", 'success')
+            }
+        })
+
+    }
+
     return (
         <div className="space-y-4">
             <h1 className="text-center font-semibold text-4xl">Details of {brand} {model} {year}</h1>
@@ -15,7 +41,7 @@ const Car = () => {
             </div>
             <p className="text-justify p-4">{details}</p>
             <div className="flex flex-col">
-                <button className="border border-blue-600 p-2 m-2 font-semibold text-blue-600">Buy Now</button>
+                <button onClick={handlePurchase} className="border border-blue-600 p-2 m-2 font-semibold text-blue-600">Purchase Now</button>
                 <button className="border border-green-600 p-2 m-2 font-semibold text-green-600">Update</button>
                 <button className="border border-red-600 p-2 m-2 font-semibold text-red-600">Delete</button>
             </div>
