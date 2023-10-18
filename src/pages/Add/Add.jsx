@@ -39,13 +39,21 @@ const Add = () => {
                 <form onSubmit={handleSubmit} className="flex gap-2 flex-col justify-center mt-10">
                     {/* brand and model */}
                     <div className="flex gap-2">
-                        <input name='brand' type="text" placeholder="Brand" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
+                        {/* <input name='brand' type="text" placeholder="Brand" className="input input-bordered input-info border-blue-600 w-full max-w-xs" /> */}
+                        <select name='brand' className="select select-bordered border-blue-600 w-full ">
+                            <option disabled selected>Select Brand</option>
+                            <option>Toyota</option>
+                            <option>Lexus</option>
+                            <option>Audi</option>
+                            <option>BMW</option>
+                            <option>Mercedes</option>
+                            <option>Ford</option>
+                        </select>
                         <input name='model' type="text" placeholder="Model" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
                     </div>
                     {/* Type and Model Year */}
                     <div className="flex gap-2">
                         {/* <input type="text" placeholder="Type" className="input input-bordered input-info border-blue-600 w-full max-w-xs" /> */}
-                        <input name='year' type="text" placeholder="Model Year" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
                         <select name='type' className="select select-bordered border-blue-600 w-full ">
                             <option disabled selected>Select Type</option>
                             <option>Sedan</option>
@@ -58,6 +66,7 @@ const Add = () => {
                             <option>MPV</option>
                             <option>Others</option>
                         </select>
+                        <input name='year' type="text" placeholder="Model Year" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
                         
                     </div>
                     {/* Price and Rating */}
