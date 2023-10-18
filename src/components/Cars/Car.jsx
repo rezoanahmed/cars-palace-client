@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { redirect, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -7,7 +7,7 @@ const Car = () => {
     
 
     const data = useLoaderData();
-    const { rating, brand, model, year, type, photo, price, details } = data
+    const { _id, rating, brand, model, year, type, photo, price, details } = data
 
 
     // purchase handler
@@ -30,6 +30,22 @@ const Car = () => {
 
     }
 
+    // delete handler
+    const handleDelete = () =>{
+        fetch(`http://localhost:5000/car/${_id}`,{
+            method: "DELETE",
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            // console.log(data.deletedCount);
+            if(data.deletedCount){
+                Swal.fire("Great!!!", "Car Has Been Deleted", "success");
+                
+            }
+        })
+    }
+
+
     return (
         <div className="space-y-4">
             <h1 className="text-center font-semibold text-4xl">Details of {brand} {model} {year}</h1>
@@ -43,7 +59,7 @@ const Car = () => {
             <div className="flex flex-col">
                 <button onClick={handlePurchase} className="border border-blue-600 p-2 m-2 font-semibold text-blue-600">Purchase Now</button>
                 <button className="border border-green-600 p-2 m-2 font-semibold text-green-600">Update</button>
-                <button className="border border-red-600 p-2 m-2 font-semibold text-red-600">Delete</button>
+                <button onClick={handleDelete} className="border border-red-600 p-2 m-2 font-semibold text-red-600">Delete</button>
             </div>
         </div>
     );
