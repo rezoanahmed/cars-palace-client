@@ -2,8 +2,8 @@
 
 const Logo = () => {
     return (
-        <div>
-            <img src={"https://i.ibb.co/VJppQx6/cars-palace.png"} alt="" />            
+        <div className="flex items-center">
+            <img src={"https://i.ibb.co/qrfnQgD/cars-palace.png"} className="w-24" alt="" />            
             <h1>Cars <span className="text-blue-600">Palace</span></h1>
         </div>
     );
