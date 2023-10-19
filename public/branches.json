@@ -1,0 +1,30 @@
+[
+    {
+      "branchName": "Downtown Plaza Branch",
+      "address": "123 Main St, Downtown City, 12345",
+      "contact": "+1 (123) 456-7890",
+      "email": "downtown@carspalace.com",
+      "photo": "https://images.pexels.com/photos/10358234/pexels-photo-10358234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "branchName": "Uptown Heights Branch",
+      "address": "456 North Ave, Uptown City, 67890",
+      "contact": "+1 (234) 567-8901",
+      "email": "uptown@carspalace.com",
+      "photo": "https://images.pexels.com/photos/86993/pexels-photo-86993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "branchName": "Westside Square Branch",
+      "address": "789 West Blvd, Westside City, 11223",
+      "contact": "+1 (345) 678-9012",
+      "email": "westside@carspalace.com",
+      "photo": "https://images.pexels.com/photos/9069383/pexels-photo-9069383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "branchName": "Eastside Park Branch",
+      "address": "101 East Ln, Eastside City, 44556",
+      "contact": "+1 (456) 789-0123",
+      "email": "eastside@carspalace.com",
+      "photo": "https://images.pexels.com/photos/4147623/pexels-photo-4147623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+  ]

@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const Customer = ({customers}) => {
     const {name, image, review} = customers;

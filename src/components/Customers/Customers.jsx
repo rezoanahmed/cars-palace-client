@@ -20,7 +20,7 @@ const Customers = () => {
     return (
         <div>
             <h1 className="p-4 text-4xl font-semibold text-center">See What Our Happy Clients Say About Us...</h1>
-            {customer.length}
+            {/* {customer.length} */}
             <Marquee>
                 {/* I Love You Purno */}
                 {customer?.map(element=><Customer key={element._id} customers={element}></Customer>)}

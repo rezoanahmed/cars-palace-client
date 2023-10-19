@@ -1,3 +1,4 @@
+import Branches from "../../pages/Branches/Branches";
 import Brands from "../../pages/Brands/Brands";
 import Customers from "../Customers/Customers";
 import Hero from "../Hero/Hero";
@@ -10,6 +11,7 @@ const Home = () => {
             <Brands></Brands>
             <Sponsors></Sponsors>
             <Customers></Customers>
+            <Branches></Branches>
             {/* <Footer></Footer> */}
             
         </div>
