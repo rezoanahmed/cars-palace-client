@@ -1,7 +1,24 @@
 import { NavLink } from "react-router-dom";
 import Logo from "../Logo/Logo";
+import { useContext } from "react";
+import { AuthContext } from "../../context/FirebaseAuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(()=>{
+                Swal.fire("Great!!!", "You've Successfully Logged Out", 'success')
+            })
+            .catch(()=>{
+                Swal.fire("OOOPPS!!!", "Something Went Wrong!", "error")
+            })
+    }
+
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/brands'>Our Brands</NavLink></li>
@@ -11,7 +28,7 @@ const Navbar = () => {
         <li><NavLink to='/add'>Add Cars</NavLink></li>
         <li><NavLink to='/about'>About</NavLink></li>
         <li><NavLink to='/contact'>Contact</NavLink></li>
-        
+
     </>
     return (
         <div>
@@ -29,11 +46,22 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                       {links}
+                        {links}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <NavLink to='/login' className="p-2 rounded-md ease-linear duration-300 text-blue-600 hover:text-white hover:bg-blue-600">Login</NavLink>
+
+                    {
+                        user ?
+                            <div className="flex justify-between items-center">
+                                <img src="https://i.ibb.co/Bcjq85V/user.png" alt="" className="w-6 h-6 rounded-full" />
+                                <button onClick={handleLogOut} className="p-2 rounded-md ease-linear duration-300 text-blue-600 hover:text-white hover:bg-blue-600">Log Out</button>
+                            </div>
+                            :
+
+                            <NavLink to='/login' className="p-2 rounded-md ease-linear duration-300 text-blue-600 hover:text-white hover:bg-blue-600">Login</NavLink>
+                    }
+
                 </div>
             </div>
         </div>
