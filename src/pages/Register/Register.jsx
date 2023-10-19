@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import { AuthContext } from "../../context/FirebaseAuthProvider";
@@ -9,6 +9,7 @@ const Register = () => {
     const { register, googleSignIn } = context;
     // console.log(test);
 
+    const navigate = useNavigate();
 
     const handleResister = e => {
         e.preventDefault();
@@ -17,13 +18,14 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const photo = form.photo.value;
-
         // console.log(name, email, password, photo);
-        register(email, password)
+        register(email, password,name,photo)
             .then(userCredentials => {
                 console.log(userCredentials.user.email);
                 if (userCredentials.user.email) {
                     Swal.fire("Great!", "Successfully Registered To Cars Palace", "success");
+                    form.reset();
+                    navigate('/');
                 }
             })
             .catch(err => console.log(err))
