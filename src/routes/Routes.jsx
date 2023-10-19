@@ -15,6 +15,7 @@ import Car from "../components/Cars/Car";
 import Update from "../pages/Update/Update";
 import Customers from "../components/Customers/Customers";
 import Sponsors from "../components/Sponsors/Sponsors";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -36,7 +37,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/add',
-                element: <Add></Add>
+                element: <PrivateRoutes><Add></Add></PrivateRoutes>,
             },
             {
                 path: '/about',

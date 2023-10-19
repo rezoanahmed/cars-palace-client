@@ -7,19 +7,23 @@ export const AuthContext = createContext(null);
 const FirebaseAuthProvider = ({children}) => {
 
     const [user,setUser]=useState(null);
+    const [loading, setLoading] = useState(true);
 
     // register user
     const register = (email, password) =>{
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     // login 
     const login = (email, password) =>{
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     // sign in with google
     const googleSignIn = () =>{
+        setLoading(true);
         // console.log("hitted");
         const provider = new GoogleAuthProvider();
         return signInWithPopup(auth, provider);
@@ -29,6 +33,7 @@ const FirebaseAuthProvider = ({children}) => {
     
     // logout
     const logOut = () =>{
+        setLoading(true);
         return signOut(auth);
     }
 
@@ -37,7 +42,8 @@ const FirebaseAuthProvider = ({children}) => {
     useEffect(()=>{
         const unSubscribe = onAuthStateChanged(auth, currentUser =>{
             console.log("User is in auth state changed", currentUser);
-            setUser(currentUser)
+            setUser(currentUser);
+            setLoading(false);
         })
         return ()=>{
             unSubscribe();
@@ -51,6 +57,8 @@ const FirebaseAuthProvider = ({children}) => {
         login,
         googleSignIn,
         logOut,
+        loading,
+        
 
 
 

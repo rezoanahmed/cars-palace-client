@@ -22,12 +22,12 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/brands'>Our Brands</NavLink></li>
-        <li><NavLink to='/cart'>My Cart</NavLink></li>
         <li><NavLink to='/gallery'>Gallery</NavLink></li>
-        <li><NavLink to='/preorder'>Pre-Order</NavLink></li>
-        <li><NavLink to='/add'>Add Cars</NavLink></li>
+        <li><NavLink className={user?"":"hidden"} to='/preorder'>Pre-Order</NavLink></li>
+        <li><NavLink className={user?"":"hidden"} to='/add'>Add Cars</NavLink></li>
         <li><NavLink to='/about'>About</NavLink></li>
         <li><NavLink to='/contact'>Contact</NavLink></li>
+        <li><NavLink className={user?"":"hidden"} to='/cart'>My Cart</NavLink></li>
 
     </>
     return (
@@ -53,7 +53,7 @@ const Navbar = () => {
 
                     {
                         user ?
-                            <div className="flex justify-between items-center">
+                            <div className="flex justify-between items-center gap-2">
                                 <img src="https://i.ibb.co/Bcjq85V/user.png" alt="" className="w-6 h-6 rounded-full" />
                                 <button onClick={handleLogOut} className="p-2 rounded-md ease-linear duration-300 text-blue-600 hover:text-white hover:bg-blue-600">Log Out</button>
                             </div>
