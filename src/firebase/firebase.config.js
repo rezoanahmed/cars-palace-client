@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyABbRvUzkWqe8jtkjWbksLaDyRyQXJs8hk",
-  authDomain: "cars-palace.firebaseapp.com",
-  projectId: "cars-palace",
-  storageBucket: "cars-palace.appspot.com",
-  messagingSenderId: "111599661518",
-  appId: "1:111599661518:web:df68fdf0931551b5547b9f"
+  apiKey: import.meta.env.VITE_api,
+  authDomain: import.meta.env.VITE_domain,
+  projectId: import.meta.env.VITE_project,
+  storageBucket: import.meta.env.VITE_storage,
+  messagingSenderId: import.meta.env.VITE_sender,
+  appId: import.meta.env.VITE_app
 };
 
 // Initialize Firebase
