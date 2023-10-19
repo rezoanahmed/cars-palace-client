@@ -25,10 +25,12 @@ const Register = () => {
                 if (userCredentials.user.email) {
                     Swal.fire("Great!", "Successfully Registered To Cars Palace", "success");
                     form.reset();
-                    navigate('/');
+                    navigate('/login');
                 }
             })
-            .catch(err => console.log(err))
+            .catch(err =>{
+                // Swal.fire("OOOPPS!!!", err.code, "error")
+            })
     }
 
     return (

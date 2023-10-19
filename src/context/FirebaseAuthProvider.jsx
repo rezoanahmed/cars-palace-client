@@ -12,18 +12,19 @@ const FirebaseAuthProvider = ({children}) => {
     // register user
     const register = async(email, password,name,photo) =>{
         setLoading(true);
-        await createUserWithEmailAndPassword(auth, email, password);
- 
+        
+        const result = await createUserWithEmailAndPassword(auth, email, password);
         await updateProfile(auth.currentUser, {
             displayName: name, photoURL: photo
-          }).then(() => {
+        }).then(() => {
             // Profile updated!
             // ...
-          }).catch((error) => {
+        }).catch((error) => {
             // An error occurred
             // ...
-          });
+        });
           await logOut()
+          return result;
     }
 
     // login 
