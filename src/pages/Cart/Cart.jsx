@@ -6,12 +6,13 @@ const Cart = () => {
 
     const data = useLoaderData();
     const [cars,setCars]=useState(data);
+    const [price, setPrice] = useState(0);
 
     const handleDelete = (id) => {
-        // console.log("deleting", id);
+        console.log("deleting", id);
         Swal.fire({
             title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            text: "You really want to remove this item from purchase list?",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -42,7 +43,7 @@ const Cart = () => {
     }
     return (
         <div className='flex h-[75vh] justify-center items-center'>
-            {cars?.length > 0 ?
+            {cars.length > 0 ?
                 <>
                     <div className="overflow-x-auto">
                         <table className="table">
@@ -57,7 +58,7 @@ const Cart = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {cars?.map((element, index) => <>
+                                {cars.map((element, index) => <>
                                     <tr className="hover">
                                         <th>{index + 1}</th>
                                         <td>{element.brand} {element.model} {element.year}</td>

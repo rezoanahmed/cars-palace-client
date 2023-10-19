@@ -1,0 +1,54 @@
+[
+      {
+        "name": "John Doe",
+        "image": "https://images.pexels.com/photos/1270076/pexels-photo-1270076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "review": "Great selection. Friendly staff. Got a fantastic deal on my sedan."
+      },
+      {
+        "name": "Jane Smith",
+        "image": "https://images.pexels.com/photos/1546912/pexels-photo-1546912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "review": "Amazing service! Highly recommend for anyone seeking a quality vehicle."
+      },
+      {
+        "name": "Sam Brown",
+        "image": "https://images.pexels.com/photos/1546912/pexels-photo-1546912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "review": "Easy financing process. Transparent and honest. Satisfied with my purchase."
+      },
+      {
+        "name": "Lucy Green",
+        "image": "https://images.pexels.com/photos/3119215/pexels-photo-3119215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "review": "Visited multiple dealerships. Cars Palace stands out in service and value."
+      },
+      {
+        "name": "Mike White",
+        "image": "https://images.pexels.com/photos/2240772/pexels-photo-2240772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "review": "Took time to understand my needs. No pushy sales tactics. Appreciated."
+      },
+      {
+        "name": "Anna Blue",
+        "image": "https://images.pexels.com/photos/3936894/pexels-photo-3936894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "review": "Test drive experience was superb. Knowledgeable staff. Left with a dream car."
+      },
+      {
+        "name": "Tom Black",
+        "image": "https://images.pexels.com/photos/18660551/pexels-photo-18660551/free-photo-of-portrait-of-an-african-man-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "review": "Experienced a minor issue, but their after-sales support was commendable."
+      },
+      {
+        "name": "Sarah Pink",
+        "image": "https://images.pexels.com/photos/1457611/pexels-photo-1457611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "review": "Wide range of cars. Was able to find the exact model I wanted."
+      },
+      {
+        "name": "Robert Gray",
+        "image": "https://images.pexels.com/photos/2240772/pexels-photo-2240772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "review": "Efficient paperwork process. The whole purchase experience was smooth."
+      },
+      {
+        "name": "Linda Yellow",
+        "image": "https://images.pexels.com/photos/1457611/pexels-photo-1457611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "review": "Trustworthy and reliable. Cars Palace made car buying enjoyable."
+      }
+    ]
+
+  

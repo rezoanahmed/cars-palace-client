@@ -13,6 +13,8 @@ import Brands from "../pages/Brands/Brands";
 import BrandDetails from "../pages/Brands/BrandDetails";
 import Car from "../components/Cars/Car";
 import Update from "../pages/Update/Update";
+import Customers from "../components/Customers/Customers";
+import Sponsors from "../components/Sponsors/Sponsors";
 
 export const router = createBrowserRouter([
     {
@@ -76,6 +78,15 @@ export const router = createBrowserRouter([
                 path: '/update/:id',
                 element: <Update></Update>,
                 loader: ({params})=>fetch(`http://localhost:5000/car/${params.id}`),
+            },
+            {
+                path: '/customers',
+                element: <Customers></Customers>,
+                loader: ()=>fetch("http://localhost:5000/customers"),
+            },
+            {
+                path: '/sponsors',
+                element: <Sponsors></Sponsors>
             }
         ]
     }

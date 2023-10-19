@@ -59,7 +59,7 @@ const Car = () => {
             <div className="flex flex-col">
                 <button onClick={handlePurchase} className="border border-blue-600 p-2 m-2 font-semibold text-blue-600">Purchase Now</button>
                 <Link to={`/update/${_id}`} className="border border-green-600 p-2 m-2 font-semibold text-green-600 text-center">Update</Link>
-                <button onClick={handleDelete} className="border border-red-600 p-2 m-2 font-semibold text-red-600">Delete</button>
+                {/* <button onClick={handleDelete} className="border border-red-600 p-2 m-2 font-semibold text-red-600">Delete</button> */}
             </div>
         </div>
     );
