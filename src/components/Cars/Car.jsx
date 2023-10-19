@@ -1,4 +1,4 @@
-import { redirect, useLoaderData } from "react-router-dom";
+import { Link, redirect, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -58,7 +58,7 @@ const Car = () => {
             <p className="text-justify p-4">{details}</p>
             <div className="flex flex-col">
                 <button onClick={handlePurchase} className="border border-blue-600 p-2 m-2 font-semibold text-blue-600">Purchase Now</button>
-                <button className="border border-green-600 p-2 m-2 font-semibold text-green-600">Update</button>
+                <Link to={`/update/${_id}`} className="border border-green-600 p-2 m-2 font-semibold text-green-600 text-center">Update</Link>
                 <button onClick={handleDelete} className="border border-red-600 p-2 m-2 font-semibold text-red-600">Delete</button>
             </div>
         </div>
