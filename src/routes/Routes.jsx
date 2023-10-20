@@ -53,7 +53,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/preorder',
-                element: <Preorder></Preorder>
+                element: <PrivateRoutes><Preorder></Preorder></PrivateRoutes>
             },
             {
                 path: '/cart',
