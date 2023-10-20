@@ -16,7 +16,7 @@ const Gallery = () => {
     ];
 
     return (
-        <div className="p-6 bg-gray-100 min-h-screen">
+        <div className="p-6 min-h-screen">
             <h2 className="text-3xl font-bold mb-6 text-center">Cars Palace Gallery</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {images.map((image, idx) => (
