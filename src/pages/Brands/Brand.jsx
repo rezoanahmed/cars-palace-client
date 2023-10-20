@@ -13,7 +13,7 @@ const Brand = ({ brand }) => {
                     {/* <h2 className="text-center text-4xl font-medium">{name}</h2> */}
                     <div className="w-full">
                         <Link to={`/brand/${name}`}>
-                            <button className="btn bg-blue-500 text-white hover:bg-blue-600 w-full">See Cars</button>
+                            <button className="btn bg-blue-500 text-white hover:bg-blue-600 w-full">See Full Details</button>
                         </Link>
                     </div>
                 </div>
