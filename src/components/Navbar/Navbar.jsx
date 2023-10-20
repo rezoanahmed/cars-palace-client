@@ -6,6 +6,23 @@ import Swal from "sweetalert2";
 
 const Navbar = () => {
 
+    // dark mode
+    const dark = () =>{
+        return document.querySelector("html").attributes['data-theme'].value="dark";
+    } 
+    const light = () =>{
+        return document.querySelector("html").attributes['data-theme'].value="light"; 
+    }
+    // dark()
+    // light()
+    const toggleDarkMode = e =>{
+        if(e.target.checked){
+            return dark();
+        }
+        return light();
+    }
+    
+
     const { user, logOut } = useContext(AuthContext);
     // console.log(user);
 
@@ -75,6 +92,7 @@ const Navbar = () => {
                     }
 
                 </div>
+                <input type="checkbox" className="toggle toggle-md" onChange={toggleDarkMode}/>
             </div>
         </div>
     );

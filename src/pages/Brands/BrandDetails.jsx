@@ -7,9 +7,6 @@ import { useEffect, useState } from "react";
 const BrandDetails = () => {
 
 
-    
-
-
     const data = useLoaderData()
     const params = useParams();
     const brandName = params.name;
@@ -20,7 +17,7 @@ const BrandDetails = () => {
         .then(res=>res.json())
         .then(data=>setBrand(data))
     },[])
-    console.log(brand.name);
+    // console.log(brand.name);
 
     return (
         <div>
