@@ -16,7 +16,7 @@ const Add = () => {
         const car = {brand, model, year, type, price, rating, photo, details};
         // console.log(car);
 
-        fetch("https://cars-palace-eycyuujxg-rezoans-projects.vercel.app/cars",{
+        fetch("https://cars-palace-ey5l3cjwy-rezoans-projects.vercel.app/cars",{
             method: "POST",
             headers:{
                 'content-type': 'application/json',

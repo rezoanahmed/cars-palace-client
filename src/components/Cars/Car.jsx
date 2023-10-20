@@ -13,7 +13,7 @@ const Car = () => {
     // purchase handler
     const handlePurchase = () =>{
         
-        fetch("https://cars-palace-eycyuujxg-rezoans-projects.vercel.app/cart",{
+        fetch("https://cars-palace-ey5l3cjwy-rezoans-projects.vercel.app/cart",{
             method: "POST",
             headers:{
                 "content-type": 'application/json',
@@ -32,7 +32,7 @@ const Car = () => {
 
     // delete handler
     const handleDelete = () =>{
-        fetch(`https://cars-palace-eycyuujxg-rezoans-projects.vercel.app/car/${_id}`,{
+        fetch(`https://cars-palace-ey5l3cjwy-rezoans-projects.vercel.app/car/${_id}`,{
             method: "DELETE",
         })
         .then(res=>res.json())

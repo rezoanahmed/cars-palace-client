@@ -5,7 +5,7 @@ import Branch from "./Branch";
 const Branches = () => {
     const [branches, setBranches] = useState([]);
     useEffect(()=>{
-        fetch("/branches.json")
+        fetch("/public/branches.json")
         .then(res=>res.json())
         .then(data=>{
             setBranches(data);
