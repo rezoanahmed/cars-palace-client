@@ -38,9 +38,20 @@ const Login = () => {
     const handleGoogleSignIn = () =>{
         googleSignIn()
         .then(()=>{
+            Swal.fire("Login Succeeded!")
             navigate(location?.state?location.state:'/')
         })
-        .catch(err=>console.log(err))
+        .catch(err => {
+            const errorCode = err.code;
+            // console.log(errorCode);
+            if (errorCode == "auth/invalid-login-credentials") {
+                Swal.fire("Try Again!", "email and password did't match", "error");
+            }
+            else {
+                Swal.fire("OOPS!", "Something went wrong", "error");
+
+            }
+        });
     }
 
     return (
