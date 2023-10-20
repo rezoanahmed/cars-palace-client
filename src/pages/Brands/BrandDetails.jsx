@@ -13,7 +13,7 @@ const BrandDetails = () => {
     // console.log(brandName);
     const [brand, setBrand] = useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5000/brands/${brandName}`)
+        fetch(`https://cars-palace-eycyuujxg-rezoans-projects.vercel.app/brands/${brandName}`)
         .then(res=>res.json())
         .then(data=>setBrand(data))
     },[])

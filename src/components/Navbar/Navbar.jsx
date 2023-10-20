@@ -92,7 +92,7 @@ const Navbar = () => {
                     }
 
                 </div>
-                <input type="checkbox" className="toggle toggle-md" onChange={toggleDarkMode}/>
+                <input type="checkbox" className="toggle toggle-md ml-3" onChange={toggleDarkMode}/>
             </div>
         </div>
     );

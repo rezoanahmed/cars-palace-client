@@ -20,7 +20,7 @@ const Update = () => {
         const car = {brand, model, year, type, price, rating, photo, details};
         // console.log(car);
 
-        fetch(`http://localhost:5000/car/${_id}`,{
+        fetch(`https://cars-palace-eycyuujxg-rezoans-projects.vercel.app/car/${_id}`,{
             method: "PATCH",
             headers:{
                 'content-type': 'application/json',
