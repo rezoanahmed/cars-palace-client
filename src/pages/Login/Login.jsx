@@ -49,7 +49,7 @@ const Login = () => {
             <div className="flex flex-col items-center justify-center">
                 <form onSubmit={handleLogin} className="flex gap-2 flex-col justify-center mt-10">
                     <input name='email' type="text" placeholder="Enter Your Email" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
-                    <input name='password' type="text" placeholder="Enter Your Password" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
+                    <input name='password' type="password" placeholder="Enter Your Password" className="input input-bordered input-info border-blue-600 w-full max-w-xs" />
                     <input type="submit" value="Login" className="bg-blue-600 text-white px-2 py-2 rounded-md" />
                 </form>
                 <button onClick={handleGoogleSignIn} className="flex items-center justify-center gap-2 border border-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 mt-2"><FcGoogle className="text-xl"></FcGoogle>Continue with Google</button>

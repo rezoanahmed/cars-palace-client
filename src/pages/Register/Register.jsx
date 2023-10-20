@@ -3,6 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import { AuthContext } from "../../context/FirebaseAuthProvider";
 import Swal from "sweetalert2";
+import { useState } from "react";
 
 const Register = () => {
     const context = useContext(AuthContext);
@@ -10,6 +11,28 @@ const Register = () => {
     // console.log(test);
 
     const navigate = useNavigate();
+
+    // password validation
+    const [passwordError, setPasswordError] = useState('');
+    const validatePassword = (password) => {
+        const minLength = 6;
+        const hasUppercase = /[A-Z]/.test(password);
+        const hasSpecialCharacter = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(password);
+
+        if (password.length < minLength) {
+            return "Password should be at least 6 characters long.";
+        }
+
+        if (!hasUppercase) {
+            return "Password should contain at least one uppercase letter.";
+        }
+
+        if (!hasSpecialCharacter) {
+            return "Password should contain at least one special character.";
+        }
+
+        return null;
+    };
 
     const handleResister = e => {
         e.preventDefault();
@@ -19,7 +42,15 @@ const Register = () => {
         const password = form.password.value;
         const photo = form.photo.value;
         // console.log(name, email, password, photo);
-        register(email, password,name,photo)
+
+        // password validation
+        const error = validatePassword(password);
+        if (error) {
+            setPasswordError(error);
+            return;
+        }
+
+        register(email, password, name, photo)
             .then(userCredentials => {
                 console.log(userCredentials.user.email);
                 if (userCredentials.user.email) {
@@ -28,8 +59,19 @@ const Register = () => {
                     navigate('/login');
                 }
             })
-            .catch(err =>{
-                // Swal.fire("OOOPPS!!!", err.code, "error")
+            .catch(err => {
+                const code = err.code;
+                console.log(err.code);
+                if (code == 'auth/email-already-in-use') {
+
+                    Swal.fire("Sorry!", "This email is already in use", "error");
+                } else if (code == 'auth/invalid-email') {
+                    Swal.fire("Invalid Email Address", "", "error");
+                }
+                else {
+                    Swal.fire("OOPS!", "Something went wrong", "error");
+                }
+
             })
     }
 
@@ -46,6 +88,8 @@ const Register = () => {
                 </form>
                 <button onClick={googleSignIn} className="flex items-center justify-center gap-2 border border-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 mt-2"><FcGoogle className="text-xl"></FcGoogle>Continue with Google</button>
                 <p className="mt-2">Already Have Account? <NavLink to='/login' className={`text-blue-600 font-medium`}>Login</NavLink></p>
+
+                {passwordError && <p className="text-red-500 mt-2">{passwordError}</p>}
             </div>
         </div>
     );

@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
-    console.log(user);
+    // console.log(user);
 
     const handleLogOut = () => {
         logOut()
@@ -24,7 +24,7 @@ const Navbar = () => {
         <li><NavLink to='/brands'>Our Brands</NavLink></li>
         <li><NavLink to='/gallery'>Gallery</NavLink></li>
         <li><NavLink className={user ? "" : "hidden"} to='/preorder'>Pre-Order</NavLink></li>
-        <li><NavLink className={user ? "" : "hidden"} to='/add'>Add Cars</NavLink></li>
+        <li><NavLink to='/add'>Add Cars</NavLink></li>
         <li><NavLink to='/about'>About</NavLink></li>
         <li><NavLink to='/contact'>Contact</NavLink></li>
         <li><NavLink className={user ? "" : "hidden"} to='/cart'>My Cart</NavLink></li>
@@ -59,14 +59,14 @@ const Navbar = () => {
                                         <img src={user.photoURL} />
                                     </div>
                                 </label>
-                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 border-[3px] border-blue-500">
                                     <li>
-                                        <a className="justify-between font-bold text-lg">
+                                        <a className="justify-between font-bold">
                                             {user.displayName}
                                         </a>
                                     </li>
-                                    <li><a className="text-gray-400">{user.email}</a></li>
-                                    <li><button onClick={()=>handleLogOut()}>Logout</button></li>
+                                    <li><a className="text-gray-400 text-xs">{user.email}</a></li>
+                                    <li><button onClick={()=>handleLogOut()} className="text-red-600 hover:bg-red-500 hover:text-white">Logout</button></li>
                                 </ul>
                             </div>
                             :
