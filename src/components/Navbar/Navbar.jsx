@@ -11,10 +11,10 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         logOut()
-            .then(()=>{
+            .then(() => {
                 Swal.fire("Great!!!", "You've Successfully Logged Out", 'success')
             })
-            .catch(()=>{
+            .catch(() => {
                 Swal.fire("OOOPPS!!!", "Something Went Wrong!", "error")
             })
     }
@@ -23,11 +23,11 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/brands'>Our Brands</NavLink></li>
         <li><NavLink to='/gallery'>Gallery</NavLink></li>
-        <li><NavLink className={user?"":"hidden"} to='/preorder'>Pre-Order</NavLink></li>
-        <li><NavLink className={user?"":"hidden"} to='/add'>Add Cars</NavLink></li>
+        <li><NavLink className={user ? "" : "hidden"} to='/preorder'>Pre-Order</NavLink></li>
+        <li><NavLink className={user ? "" : "hidden"} to='/add'>Add Cars</NavLink></li>
         <li><NavLink to='/about'>About</NavLink></li>
         <li><NavLink to='/contact'>Contact</NavLink></li>
-        <li><NavLink className={user?"":"hidden"} to='/cart'>My Cart</NavLink></li>
+        <li><NavLink className={user ? "" : "hidden"} to='/cart'>My Cart</NavLink></li>
 
     </>
     return (
@@ -53,9 +53,21 @@ const Navbar = () => {
 
                     {
                         user ?
-                            <div className="flex justify-between items-center gap-2">
-                                <img src="https://i.ibb.co/Bcjq85V/user.png" alt="" className="w-6 h-6 rounded-full" />
-                                <button onClick={handleLogOut} className="p-2 rounded-md ease-linear duration-300 text-blue-600 hover:text-white hover:bg-blue-600">Log Out</button>
+                            <div className="dropdown dropdown-end">
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img src={user.photoURL} />
+                                    </div>
+                                </label>
+                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                    <li>
+                                        <a className="justify-between font-bold text-lg">
+                                            {user.displayName}
+                                        </a>
+                                    </li>
+                                    <li><a className="text-gray-400">{user.email}</a></li>
+                                    <li><button onClick={()=>handleLogOut()}>Logout</button></li>
+                                </ul>
                             </div>
                             :
 
