@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Slider from "../../components/Slider/Slider";
+import PropTypes from 'prop-types'
 
 
 const Brand = ({ brand }) => {
@@ -21,5 +21,7 @@ const Brand = ({ brand }) => {
         </div>
     );
 };
-
+Brand.propTypes = {
+    brand: PropTypes.object.isRequired,
+}
 export default Brand;

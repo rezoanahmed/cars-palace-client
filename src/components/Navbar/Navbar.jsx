@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import { useContext } from "react";
 import { AuthContext } from "../../context/FirebaseAuthProvider";
@@ -25,11 +25,13 @@ const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
     // console.log(user);
+    const navigate = useNavigate()
 
     const handleLogOut = () => {
         logOut()
             .then(() => {
                 Swal.fire("Great!!!", "You've Successfully Logged Out", 'success')
+                navigate('/');
             })
             .catch(() => {
                 Swal.fire("OOOPPS!!!", "Something Went Wrong!", "error")

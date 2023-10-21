@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types'
 
 const Cars = ({ cars }) => {
     const { _id, brand, model, year, type, price, rating, photo, details } = cars;
@@ -24,5 +24,9 @@ const Cars = ({ cars }) => {
         </div>
     );
 };
+
+Cars.propTypes = {
+    cars: PropTypes.object.isRequired,
+}
 
 export default Cars;

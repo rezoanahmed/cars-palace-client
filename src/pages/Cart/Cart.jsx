@@ -6,7 +6,7 @@ const Cart = () => {
 
     const data = useLoaderData();
     const [cars,setCars]=useState(data);
-    const [price, setPrice] = useState(0);
+    
 
     const handleDelete = (id) => {
         console.log("deleting", id);
@@ -20,7 +20,7 @@ const Cart = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://cars-palace-ey5l3cjwy-rezoans-projects.vercel.app/cart/${id}`, {
+                fetch(`https://cars-palace-qlg3l0r23-rezoans-projects.vercel.app/cart/${id}`, {
                     method: "DELETE",
                 })
                     .then(res => res.json())

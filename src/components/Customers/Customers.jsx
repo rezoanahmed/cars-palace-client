@@ -8,7 +8,7 @@ const Customers = () => {
     
     const [customer, setCustomer] = useState([]);
     useEffect(()=>{
-        fetch("/public/customers.json")
+        fetch("/customers.json")
         .then(res=>res.json())
         .then(data=>{
             setCustomer(data);

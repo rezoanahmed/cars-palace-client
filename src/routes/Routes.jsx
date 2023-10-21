@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: ()=>fetch("https://cars-palace-ey5l3cjwy-rezoans-projects.vercel.app/brands"),
+                loader: ()=>fetch("https://cars-palace-qlg3l0r23-rezoans-projects.vercel.app/brands"),
             },
             {
                 path: '/login',
@@ -58,32 +58,32 @@ export const router = createBrowserRouter([
             {
                 path: '/cart',
                 element: <PrivateRoutes><Cart></Cart></PrivateRoutes>,
-                loader: ()=>fetch("https://cars-palace-ey5l3cjwy-rezoans-projects.vercel.app/cart"),
+                loader: ()=>fetch("https://cars-palace-qlg3l0r23-rezoans-projects.vercel.app/cart"),
             },
             {
                 path: '/brands',
                 element: <Brands></Brands>,
-                loader: ()=>fetch("https://cars-palace-ey5l3cjwy-rezoans-projects.vercel.app/brands"),
+                loader: ()=>fetch("https://cars-palace-qlg3l0r23-rezoans-projects.vercel.app/brands"),
             },
             {
                 path: '/brand/:name',
                 element: <BrandDetails></BrandDetails>,
-                loader: ({params})=>fetch(`https://cars-palace-ey5l3cjwy-rezoans-projects.vercel.app/cars/${params.name}`)
+                loader: ({params})=>fetch(`https://cars-palace-qlg3l0r23-rezoans-projects.vercel.app/cars/${params.name}`)
             },
             {
                 path: '/car/:id',
                 element: <PrivateRoutes><Car></Car></PrivateRoutes>,
-                loader: ({params})=>fetch(`https://cars-palace-ey5l3cjwy-rezoans-projects.vercel.app/car/${params.id}`)
+                loader: ({params})=>fetch(`https://cars-palace-qlg3l0r23-rezoans-projects.vercel.app/car/${params.id}`)
             },
             {
                 path: '/update/:id',
                 element: <Update></Update>,
-                loader: ({params})=>fetch(`https://cars-palace-ey5l3cjwy-rezoans-projects.vercel.app/car/${params.id}`),
+                loader: ({params})=>fetch(`https://cars-palace-qlg3l0r23-rezoans-projects.vercel.app/car/${params.id}`),
             },
             {
                 path: '/customers',
                 element: <Customers></Customers>,
-                loader: ()=>fetch("https://cars-palace-ey5l3cjwy-rezoans-projects.vercel.app/customers"),
+                loader: ()=>fetch("https://cars-palace-qlg3l0r23-rezoans-projects.vercel.app/customers"),
             },
             {
                 path: '/sponsors',

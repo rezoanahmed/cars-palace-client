@@ -1,8 +1,9 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 const Update = () => {
+    const navigate = useNavigate();
     const data = useLoaderData();
     const {_id, brand, model, year, type, price, rating, photo, details} = data;
     const handleUpdate = e =>{
@@ -20,7 +21,7 @@ const Update = () => {
         const car = {brand, model, year, type, price, rating, photo, details};
         // console.log(car);
 
-        fetch(`https://cars-palace-ey5l3cjwy-rezoans-projects.vercel.app/car/${_id}`,{
+        fetch(`https://cars-palace-qlg3l0r23-rezoans-projects.vercel.app/car/${_id}`,{
             method: "PATCH",
             headers:{
                 'content-type': 'application/json',
@@ -32,6 +33,7 @@ const Update = () => {
             console.log(data);
             if(data.modifiedCount){
                 Swal.fire("Great!!!", "Car Details Has Been Updated Successfully", "success");
+                navigate(`/car/${_id}`)
             }
         })
     }

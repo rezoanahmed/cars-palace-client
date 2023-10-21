@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 
 const Customer = ({customers}) => {
     const {name, image, review} = customers;
@@ -12,5 +12,7 @@ const Customer = ({customers}) => {
         </div>
     );
 };
-
+Customer.propTypes={
+    customers: PropTypes.object.isRequired,
+}
 export default Customer;
