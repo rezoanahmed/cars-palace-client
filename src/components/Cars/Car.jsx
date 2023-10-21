@@ -24,26 +24,26 @@ const Car = () => {
         .then(data=>{
             console.log(data.insertedId);
             if(data.insertedId){
-                Swal.fire("Congratulations!!!", "Your Purchase Has Been Done", 'success')
+                Swal.fire("Congratulations!!!", "Product Has Been Added To Cart", 'success')
             }
         })
 
     }
 
     // delete handler
-    const handleDelete = () =>{
-        fetch(`https://cars-palace-qlg3l0r23-rezoans-projects.vercel.app/car/${_id}`,{
-            method: "DELETE",
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            // console.log(data.deletedCount);
-            if(data.deletedCount){
-                Swal.fire("Great!!!", "Car Has Been Deleted", "success");
+    // const handleDelete = () =>{
+    //     fetch(`https://cars-palace-qlg3l0r23-rezoans-projects.vercel.app/car/${_id}`,{
+    //         method: "DELETE",
+    //     })
+    //     .then(res=>res.json())
+    //     .then(data=>{
+    //         // console.log(data.deletedCount);
+    //         if(data.deletedCount){
+    //             Swal.fire("Great!!!", "Car Has Been Deleted", "success");
                 
-            }
-        })
-    }
+    //         }
+    //     })
+    // }
 
 
     return (
@@ -58,7 +58,7 @@ const Car = () => {
             <p className="text-justify p-4">{details}</p>
             <div className="flex flex-col">
                 <button onClick={handlePurchase} className="border border-blue-600 p-2 m-2 font-semibold text-blue-600">Purchase Now</button>
-                <Link to={`/update/${_id}`} className="border border-green-600 p-2 m-2 font-semibold text-green-600 text-center">Update</Link>
+                
                 {/* <button onClick={handleDelete} className="border border-red-600 p-2 m-2 font-semibold text-red-600">Delete</button> */}
             </div>
         </div>

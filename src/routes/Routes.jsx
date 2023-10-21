@@ -77,7 +77,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/update/:id',
-                element: <Update></Update>,
+                element: <PrivateRoutes><Update></Update></PrivateRoutes>,
                 loader: ({params})=>fetch(`https://cars-palace-qlg3l0r23-rezoans-projects.vercel.app/car/${params.id}`),
             },
             {

@@ -18,6 +18,7 @@ const Cars = ({ cars }) => {
                         <Link to={`/car/${_id}`}>
                             <button className="btn bg-blue-500 text-white hover:bg-blue-600 w-full">See Full Details</button>
                         </Link>
+                        <Link to={`/update/${_id}`} className="btn bg-green-500 text-white hover:bg-green-600 w-full">Update Details</Link>
                     </div>
                 </div>
             </div>
