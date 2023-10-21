@@ -42,7 +42,7 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/brands'>Our Brands</NavLink></li>
         <li><NavLink to='/gallery'>Gallery</NavLink></li>
-        <li><NavLink className={user ? "" : "hidden"} to='/preorder'>Pre-Order</NavLink></li>
+        <li><NavLink to='/preorder'>Pre-Order</NavLink></li>
         <li><NavLink to='/add'>Add Cars</NavLink></li>
         <li><NavLink to='/about'>About</NavLink></li>
         <li><NavLink to='/contact'>Contact</NavLink></li>
